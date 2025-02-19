@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
 
+/* CSS Variables */
+:root {
+    --primary-color: #3dc5e0;
+    --secondary-color: #4CAF50;
+    --accent-color: #3498db;
+    --background-color: rgba(255, 255, 255, 0.95);
+    --text-color: #333;
+    --hover-color: #2980b9;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #3dc5e0;
+    background-color: var(--primary-color);
     margin: 0;
     padding: 0;
-    color: #333;
+    color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -81,7 +91,7 @@ h1 {
     max-width: 1000px;
     margin: auto;
     padding: 30px;
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: var(--background-color);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(10px);
@@ -127,7 +137,7 @@ h1 {
 }
 
 .Basket {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: var(--background-color);
     position: fixed;
     top: 20px;
     right: 20px;
@@ -175,7 +185,7 @@ h1 {
 .addToBasket {
     border: none;
     border-radius: 25px;
-    background-color: #4CAF50;
+    background-color: var(--secondary-color);
     color: white;
     cursor: pointer;
     margin-left: 50px;
@@ -201,7 +211,7 @@ h1 {
 }
 
 .quantitySelect {
-    border: 2px solid #4CAF50;
+    border: 2px solid var(--secondary-color);
     border-radius: 25px;
     background-color: white;
     padding: 10px 15px;
@@ -229,7 +239,7 @@ h1 {
 }
 
 #submit, #clearBasket, #Top {
-    background-color: #3498db;
+    background-color: var(--accent-color);
     color: white;
     border: none;
     border-radius: 25px;
@@ -243,20 +253,20 @@ h1 {
 }
 
 #submit:hover, #clearBasket:hover, #Top:hover {
-    background-color: #2980b9;
+    background-color: var(--hover-color);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
 }
 
 #toTop {
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 #toTop:hover {
-    color: #3498db;
+    color: var(--accent-color);
 }
 
 /* Responsive adjustments */
@@ -273,5 +283,15 @@ h1 {
 
     h1 {
         font-size: 40px;
+    }
+
+    .product img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .addToBasket {
+        margin-left: 0;
+        width: 100%;
     }
 }
